@@ -2,10 +2,9 @@
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
-
+@import 'mixin.queries';
 .container {
-  display: grid;
-  place-items: center;
+  @include grid;
   font-family: $cardfont;
   & .card {
     display: grid;
@@ -37,8 +36,7 @@
   justify-content: start;
 }
 .photo {
-  display: grid;
-  place-items: center;
+  @include grid;
   width: 100%;
 }
 .image {
@@ -98,7 +96,7 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@include breakpoint(large) {
   .wrapper {
     flex-flow: column nowrap;
   }
@@ -106,7 +104,7 @@
     gap: 0.75rem;
   }
 }
-@media screen and (max-width: 768px) {
+@include breakpoint(desktop) {
   .card {
     min-width: 500px;
   }
@@ -120,11 +118,11 @@
     gap: 0.75rem;
   }
 }
-@media screen and (max-width: 700px) {
+@include breakpoint(tablet) {
   .linkedin {display: none;}
   .linkedin2 {display: inline-block;}
 }
-@media screen and (max-width: 550px) {
+@include breakpoint(smtablet) {
   #email {
     font-size: 0.75rem;
   }
@@ -135,7 +133,7 @@
     }
   }
 }
-@media screen and (max-width: 400px) {
+@include breakpoint(mobile) {
   .profile-list {
     margin: 0;
     padding: 0;
