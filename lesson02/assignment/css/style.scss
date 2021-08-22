@@ -4,3 +4,118 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.container {
+  display: grid;
+  place-items: center;
+  font-family: $cardfont;
+  margin: auto;
+  & .card {
+    display: grid;
+    color: $text-grey;
+    place-items: center;
+    background-color: #fff8;
+    border: 50px solid $dark-grey;
+    border-radius: 5px;
+    max-width: 75%;
+    min-width: 30%;
+  }
+}
+.wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 50px;
+  max-width: 90%;
+  min-width: 30%;
+}
+/*profile image, name, job title*/
+.profile {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 2;
+  align-items: center;
+  justify-content: start;
+}
+.photo {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 50%;
+}
+.title {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 0.2rem;
+}
+
+.name {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 0.2rem;
+}
+/*Details about employee experience and contact information*/
+.details {
+  display: flex;
+  flex-grow: 2;
+  flex-shrink: 1;
+  background-color: $profile;
+  width: 100%;
+  overflow: hidden;
+}
+.info {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.profile-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+  & .item {
+    font-size: 1.2rem;
+  }
+}
+.linkedin {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper {
+    flex-flow: column nowrap;
+  }
+  .profile-list {
+    gap: 0.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    min-width: 500px;
+  }
+  .item {
+    font-size: 1rem;
+    max-width: 50%;
+  }
+  .linkedin {
+    gap: 0.75rem;
+    max-width: 50%;
+    flex-flow: column nowrap;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title-card {
+    text-align: center;
+    line-height: 2rem;
+}
