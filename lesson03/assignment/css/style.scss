@@ -1,6 +1,97 @@
-// Import partials here
 @import 'base.normalize';
 @import 'settings.variables';
 @import 'settings.responsive';
 @import 'components.content';
 
+.container {
+  display: grid;
+  place-items: center;
+  font-family: $cardfont;
+  & .card {
+    display: grid;
+    place-items: center;
+    color: $text-grey;
+    background-color: #fff8;
+    border: 50px solid $dark-grey;
+    border-radius: 5px;
+    max-width: 75%;
+    min-width: 30%;
+  }
+}
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 3rem;
+  max-width: 90%;
+  min-width: 30%;
+}
+
+/*profile image, name, job title*/
+.profile {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+  flex-shrink: 2;
+  align-items: center;
+  justify-content: start;
+}
+.photo {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+.image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 50%;
+}
+.title {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 0.2rem;
+}
+.title-card {
+  text-align: center;
+}
+.name {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 0.2rem;
+}
+
+/*Details about employee work experience, education and contact information*/
+.details {
+  display: flex;
+  flex-grow: 2;
+  flex-shrink: 1;
+  background-color: $profile;
+  width: 100%;
+  overflow: hidden;
+}
+.info {
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+.profile-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+  & .item {
+    font-size: 1.2rem;
+  }
+}
+.linkedin {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.linkedin2 {
+  display: none;
+  & :hover {
+    filter: drop-shadow(3px 3px 3px #8811cc) saturate(4);
+  }
+}
