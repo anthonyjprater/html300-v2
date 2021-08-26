@@ -6,17 +6,18 @@
 .container {
   display: grid;
   place-items: center;
+  gap: 2rem;
   font-family: $cardfont;
-  & .card {
+}
+.card {
     display: grid;
     place-items: center;
     color: $text-grey;
     background-color: #fff8;
     border: 50px solid $dark-grey;
     border-radius: 5px;
-    max-width: 75%;
+    max-width: 65%;
     min-width: 30%;
-  }
 }
 .wrapper {
   display: flex;
@@ -84,6 +85,7 @@
     font-size: 1.2rem;
   }
 }
+
 .linkedin {
   display: flex;
   align-items: center;
@@ -94,4 +96,29 @@
   & :hover {
     filter: drop-shadow(3px 3px 3px #8811cc) saturate(4);
   }
+}
+
+@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
+  .linkedin {display: none;}
+  .linkedin2 {display: inline-block;}
+}
+@media screen and (max-width: 550px) {
+  #email {
+    font-size: 0.75rem;
+  }
+  .title-card {
+    text-align: center;
+    line-height: 2rem;
+    & > * {
+      line-height: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .profile-list {
+    margin: 0;
+    padding: 0;
+  }
+}
 }
