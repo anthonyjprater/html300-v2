@@ -45,13 +45,13 @@ mainCard.innerHTML = `
     </div>
     <div class="details">
       <ul class="profile-list">
-      <li class="item" id="company"><span class="info">Company: </span>${company}</li>
-            <li class="item" id="experience"><span class="info">Experience: </span>${experience}</li>
-            <li class="item" id="school"><span class="info">School: </span>${school}</li>
-            <li class="item" id="major"><span class="info">Major: </span>${major}</li>
-            <li class="item" id="email"><span class="info">Email: </span>${email}</li>
-            <li class="item" id="codeLanguages"><span class="info">Coding Languages: </span>${keys}</li>
-            <li class="item linkedin" id="linkedInUrl"><span class="info"><img src="/img/linkedin.svg" alt="linked in logo" class="logo" ></span>${linkedIn}</li>
+      <li class="item" id="company"><span class="info">Company: </span><span>${company}</span></li>
+            <li class="item" id="experience"><span class="info">Experience: </span><span>${experience}</span></li>
+            <li class="item" id="school"><span class="info">School: </span><span>${school}</span></li>
+            <li class="item" id="major"><span class="info">Major: </span><span>${major}</span></li>
+            <li class="item" id="email"><span class="info">Email: </span><span>${email}</span></li>
+            <li class="item" id="codeLanguages"><span class="info">Coding Languages: </span><span>${keys}</span></li>
+            <li class="item linkedin" id="linkedInUrl"><span class="info"><img src="/img/linkedin.svg" alt="linked in logo" class="logo" ></span><span>${linkedIn}</span></li>
       </ul>
     </div>
   </div>
