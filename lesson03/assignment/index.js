@@ -1,5 +1,6 @@
-const container = document.querySelector('.container');
+window.addEventListener('DOMContentLoaded', (event) => {
 
+const container = document.querySelector('.container');
 
 /*Fetch function for JSON data*/
 async function fetchDataJSON() {
@@ -10,8 +11,6 @@ async function fetchDataJSON() {
 fetchDataJSON().then(card => {
   card; // fetched data
 
-
-
 /*Loop Here*/
 card.forEach((card) => {
 
@@ -19,7 +18,6 @@ let mainCard = document.createElement('main');
 mainCard.className = 'card';
 
 const keys = Object.values(card.codeLanguages);
-
 
 let name = card.name;
 let jobTitle = card.jobTitle;
@@ -30,7 +28,6 @@ let major = card.major;
 let email = card.email;
 let linkedIn = card.linkedInUrl;
 let code = card.codeLangauges;
-
 
 mainCard.innerHTML = `
   <div class="wrapper">
@@ -61,8 +58,6 @@ container.appendChild(mainCard);
     });
 document.body.appendChild(container);
   });
-
-window.addEventListener('DOMContentLoaded', (event) => {
 
 console.log('DOM fully loaded and parsed');
 });
