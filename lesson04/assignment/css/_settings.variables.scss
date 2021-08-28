@@ -8,3 +8,9 @@ $red: #ff0000;
 
 //Typography
 $font: 'Poppins', sans-serif;
+
+//Mixins
+@mixin grid {
+  display: grid;
+  place-items: center;
+}
