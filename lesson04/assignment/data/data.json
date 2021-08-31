@@ -1,17 +1,22 @@
 [
-  {
-    "social": "fab fa-facebook-f"
-  },
-  {
-    "social": "fab fa-twitter"
-  },
-  {
-    "social": "fab fa-instagram"
-  },
-  {
-    "social": "fab fa-linkedin-in"
-  },
-  {
-    "social": "fab fa-youtube"
-  }
+   {
+      "social": "fab fa-facebook-f",
+      "brand": "facebook"
+   },
+   {
+      "social": "fab fa-twitter",
+      "brand": "twitter"
+   },
+   {
+      "social": "fab fa-instagram",
+      "brand": "instagram"
+   },
+   {
+      "social": "fab fa-linkedin-in",
+      "brand": "linkedin"
+   },
+   {
+      "social": "fab fa-youtube",
+      "brand": "youtube"
+   }
 ]
