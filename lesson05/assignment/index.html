@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://kit.fontawesome.com/5398a5e1fc.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
   <title>Assignment 05 - CSS Grid and Flexbox</title>
 </head>
 
@@ -36,7 +37,7 @@
         <div id="prompt" class="translator__prompt bubble">What text would you like me to translate for you?</div>
         <form action="" class="translator__form">
           <div id="userInput" class="bubble">
-            <textarea name="ytext" id="ytext" cols="120" rows="10" class="form" placeholder="Please type your text here so C-3P0 can translate it for you..."></textarea>
+            <textarea name="ytext" id="ytext" cols="120" rows="10" class="form" onfocus="myfunction(c3po)" onblur="yourfunction(c3po)" placeholder="Please type your text here so C-3P0 can translate it for you..."></textarea>
           </div>
           <span id="outPut" class="bubble"></span>
           <button id="translateButton" type="submit" name="translate" class="translator__btn--hidden">Translate Now</button>
@@ -48,7 +49,7 @@
     <aside class="sidebar">
       <!-- 	avatar image -->
       <div class="img">
-        <img src="/images/c3po.jpg" alt="" class="avatar">
+        <img src="/images/c3po.jpg" alt="a repaired golden droid" class="avatar" id="c3po">
       </div>
     </aside>
     <!-- footer-->
@@ -66,7 +67,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <span class="fab fa-facebook-f"></span>
+              <span class="fab fa-facebook-f"><a href="https://www.facebook.com/"></a></span>
             </div>
           </a>
           <a href="#">
@@ -75,7 +76,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <span class="fab fa-twitter"></span>
+              <span class="fab fa-twitter"><a href="https://twitter.com/?lang=en"></a></span>
             </div>
           </a>
           <a href="#">
@@ -84,7 +85,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <span class="fab fa-instagram"></span>
+              <span class="fab fa-instagram"><a href="https://www.instagram.com/"></a></span>
             </div>
           </a>
           <a href="#">
@@ -93,7 +94,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <span class="fab fa-linkedin-in"></span>
+              <span class="fab fa-linkedin-in"><a href="https://www.linkedin.com/"></a></span>
             </div>
           </a>
           <a href="#">
@@ -102,7 +103,7 @@
               <span></span>
               <span></span>
               <span></span>
-              <span class="fab fa-youtube"></span>
+              <span class="fab fa-youtube"><a href="https://www.youtube.com/"></a></span>
             </div>
           </a>
         </div>

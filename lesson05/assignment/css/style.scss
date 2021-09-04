@@ -1,4 +1,4 @@
-// Import partials here
+// Import and fonts partials here
 @import "base.normalize";
 @import "settings.variables";
 @import "settings.responsive";
@@ -23,6 +23,7 @@ body {
 a {
   text-decoration: none;
 }
+//Page Layout in CSS Grid including responsive media query
 .container {
   display: grid;
   height: 100%;
@@ -39,6 +40,7 @@ a {
     grid-gap: 1rem;
   }
 }
+//Header Styling
 .header {
   background-color: #000;
   grid-area: h;
@@ -51,24 +53,26 @@ a {
     width: 100%;
   }
 }
+//Logo Styling including hover affect
 .logo {
   display: inline-block;
   margin-top: 0.5rem;
   margin-left: 1.25rem;
   padding: 0.25rem;
   overflow: hidden;
-  color: #482ff7;
+  color: $space-blue;
   font-size: 2rem;
   font-weight: 400;
-  text-shadow: 2px 2px 2px #ff8080, 0 0 2px blue, 0 0 2px blue;
+  text-shadow: 2px 2px 2px $space-red, 0 0 2px $space-blue, 0 0 2px $space-blue;
   font-family: $galaxy;
   transition: text-shadow 1s ease, color 2s ease, font-weight 2s ease,
     opacity 2s ease;
   &:hover {
-    text-shadow: 8px -8px 8px #ff8080;
+    text-shadow: 8px -8px 8px $space-red;
     opacity: 0;
   }
 }
+//Nav Bar Styling (intending to add hamburger drop down menu for mobile UI)
 .nav {
   background-color: #000;
   font-family: $moon;
@@ -92,10 +96,8 @@ a {
   & .nav-link {
     color: #fff;
     margin: 0rem 2rem;
-    &:hover {
-      color: #4574bf;
-    }
   }
+  //Styling for Hamburger button and hiding from display on larger screens
   & .hamburger {
     display: none;
     background-color: #fff;
@@ -113,7 +115,12 @@ a {
     }
   }
 }
-
+@include media-query(mobile) {
+  #js-menu {
+    display: none;
+  }
+}
+//Styling for hamburger transition
 .hamburger.active .bar:nth-child(2) {
   opacity: 0;
 }
@@ -129,8 +136,9 @@ a {
   background-color: #000;
   box-shadow: 1px 1px 3px 1px blue;
 }
+
 .hamburger:hover {
-  box-shadow: 2px 2px 8px 1px #0000c9;
+  box-shadow: 2px 2px 8px 1px $saber-blue;
 }
 .bar {
   display: block;
@@ -141,28 +149,35 @@ a {
   transition: all 0.3s ease-in-out;
   background-color: #ccc;
 }
-
+//Menu Items (Wrappers for Nav items)
 .menu {
   display: flex;
   list-style-type: none;
   justify-content: space-evenly;
+  background-color: #000;
   align-items: center;
   text-align: center;
   @include newborder;
-  box-shadow: 3px 3px 3px #2f2f2f;
+  box-shadow: 3px 3px 3px $eclipse;
   min-width: 5rem;
+  &:hover {
+    background-color: $saber-blue;
+    box-shadow: none;
+  }
 }
-
+//Styling for sidebar (Incomplete working on hologram animation for image or input area)
 .sidebar {
   background-color: #000;
   grid-area: s;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #fff;
+  // grid-row: 3 / 4;
+  // grid-column: 1 / 2;
+  display: grid;
+  place-items: center;
+  @include media-query(mobile) {
+    max-width: 100%;
+  }
 }
+//Main Content consisting of user input area and interactive buttons
 .main-content {
   background-color: #000;
   grid-area: c;
@@ -179,8 +194,9 @@ a {
     width: 100%;
   }
 }
+//Styling for User Input
 .form {
-  background-color: #f8f8f8;
+  background-color: $form;
   opacity: 1;
   color: #000;
   @include media-query(mobile) {
@@ -194,13 +210,14 @@ a {
 }
 .translator__btn,
 .translator__btn--hidden {
-  background-color: #8f8f8f;
+  background-color: $form-btn;
   @include newborder;
   margin-top: 2rem;
   opacity: 0.3;
+  line-height: 2rem;
   &:hover {
     font-size: 1.75rem;
-    background-color: #00f;
+    background-color: $saber-blue;
     opacity: 1;
   }
 }
@@ -208,7 +225,7 @@ a {
 textarea {
   box-sizing: border-box;
   resize: none;
-  max-width: 50%;
+  max-width: 100%;
   @include newborder;
   @include media-query(mobile) {
     max-width: 95%;
@@ -218,29 +235,20 @@ textarea {
   max-width: 100%;
   font-family: "moderna";
 }
-
-.sidebar {
+//Styling for Hologram Image
+.img {
+  max-width: 100%;
   display: grid;
   place-items: center;
-  grid-row: 3 / 4;
-  grid-column: 1 / 2;
-  @include media-query(mobile) {
+  margin: 0 1rem 0;
+  & .avatar {
     max-width: 100%;
-  }
-  .img {
-    max-width: 100%;
-    display: grid;
-    place-items: center;
-    margin: 0 1rem 0;
+    height: auto;
+    filter: invert(1) opacity(0.2);
+    border-radius: 50%;
   }
 }
-.avatar {
-  max-width: 100%;
-  height: auto;
-  filter: invert(1) opacity(0.2);
-  border-radius: 50%;
-}
-
+//Footer (yet to incorporate transitions for icons)
 .footer {
   background-color: #000;
   grid-area: f;
@@ -262,7 +270,7 @@ textarea {
       color: #fff;
       &:hover {
         opacity: 0.5;
-        text-shadow: 2px 2px #0000f0;
+        text-shadow: 2px 2px $saber-blue;
       }
     }
   }
@@ -270,6 +278,7 @@ textarea {
     display: flex;
   }
 }
+//Social Media Icon Styling
 .icons {
   display: flex;
   font-size: 1.25rem;
@@ -280,10 +289,5 @@ textarea {
   color: darkblue;
   &:hover {
     font-size: 2rem;
-  }
-}
-@include media-query(mobile) {
-  #js-menu {
-    display: none;
   }
 }
