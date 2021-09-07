@@ -9,21 +9,21 @@ const imageWrapper = document.querySelector(".wrapper_gallery");
 
 /*Fetch function for JSON data*/
 async function fetchDataJSON() {
-  const response = await fetch('https://api.unsplash.com/photos/?client_id=PaHrfu4_q3NMgYkSbeKWbwn7QLzd8AQuzUtbVnBkafg');
+  const response = await fetch('https://api.unsplash.com/search/photos?query=starwars&per_page=12&client_id=PaHrfu4_q3NMgYkSbeKWbwn7QLzd8AQuzUtbVnBkafg');
   const data = await response.json();  return data;
 };
 
 fetchDataJSON().then(data => {
   data; // fetched data
 
-  console.log(data);
+  console.log(data.results);
 
 
 /*Loop Here*/
-data.forEach((data) => {
+data.results.forEach((data) => {
 
   let imageBox = document.createElement('figure');
-  imageBox.className = 'gallery__item col-lg-4 col-md-6 col-sm-12';
+  imageBox.className = 'gallery__item col-xl-2 col-lg-4 col-md-6 col-sm-12';
   imageBox.id = 'gallery';
   let imageLink = data.urls.regular;
   let creditLink = data.user.links.html;
