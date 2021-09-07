@@ -4,6 +4,8 @@
 @import "settings.responsive";
 @import "components.content";
 
+
+
 /*Landing Page Styling*/
 .stars,
 .twinkling {
@@ -57,13 +59,19 @@
   font-family: sans-serif;
 }
 
+
+
+
+
 /*Image Page Styling*/
 .title__image {
 	font-family: SF Distant Galaxy Outline;
 	text-shadow: 4px 4px 5px $saber-blue, 2px 2px 2px $space-blue, 2px 2px 8px $space-blue;
 	color: $becca;
 }
-
 .image__page {
   background-color: #000;
+}
+.gallery__image {
+  max-height: 300px;
 }

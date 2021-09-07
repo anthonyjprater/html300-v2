@@ -8,6 +8,15 @@ html {
     box-sizing: inherit;
 }
 
+html, body {
+  height: 100%;
+}
+
+.full-page {
+  height: 100vh;
+  width: 100vw;
+}
+
 .main {
     padding: 2rem;
 }
