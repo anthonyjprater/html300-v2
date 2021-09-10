@@ -71,41 +71,55 @@
 }
 
 
-
-
 .navbar-brand {
   font-family: SF Distant Galaxy Outline, 'monospace';
-  color: $space-blue;
-  text-shadow: 5px 5px 5px $space-red, 0 0 5px $space-blue, 0 0 2px $space-blue;
+  color: red;
+  letter-spacing: -0.15rem;
+  text-shadow: 2px 2px 2px $space-red, 0 0 2px $space-blue, 0 0 2px $space-blue;
   font-family: $galaxy;
   transition: text-shadow 1s ease, color 2s ease, font-weight 2s ease,
-    opacity 2s ease;
+  opacity 2s ease;
   &:hover {
     color: #fff;
   	text-shadow: 1px 1px 2px gold, 0 0 1rem yellow, 0 0 0.2rem yellow;
   	font-weight: 600;
   	border-radius: 8px;
   }
-}
-.nav-item {
-  font-size: 1.5rem;
-  border-radius: 8px;
-  & .nav-link {
-    color: $eclipse;
-    &:hover{
-      color: $saber-blue;
-    }
-  }
-  &:hover {
-    box-shadow: 3px 3px 3px $eclipse;
+  & .logo {
+    font-size: 1.5rem;
   }
 }
 
-// .dropdown-item {
-//   &:hover {
-//   color: $saber-blue;
-//   }
-// }
+.nav-item {
+  font-family: $moon;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px 1px $eclipse;
+  & .nav-link {
+    color: $eclipse;
+    &:hover{
+      color: #bbb;
+      text-shadow: 1px 1px 1px #88f;
+    }
+  }
+  &:hover {
+    box-shadow: 3px 3px 3px #bbb;
+  }
+}
+
+div > .dropdown-item {
+  color: $space-blue;
+  font-family: $moon;
+  text-shadow: 2px 2px 2px #bbb;
+  &:hover {
+  color: #bbb;
+  text-shadow: 2px 2px 2px $space-blue;
+  background-color: #000;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  }
+}
 
 .navbar-toggler {
   border: 1px solid $space-blue;
