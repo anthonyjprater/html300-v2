@@ -2,89 +2,46 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/5398a5e1fc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <title>Assignment 06 - Bootstrap 4</title>
     </head>
-    <body class="image__page">
+    <body class="body">
+        <main class="main">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand shadow-large" href="#"><h1>Galactic Translator</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">Menu</span>
+            </button>
 
-      <main class="container gallery text-center py-3">
-        <h1 class="display-4 title__image font-weight-bold pb-2 mt-4 mb-2 border-bottom">Views of the Galactic Empire</h1><a href="index.html">HERE</a>
-        <div id="galleryWrapper" class="wrapper_gallery row align-content-around border border-secondary rounded pt-3">
-        </div>
-        <footer class="col-12 row justify-content-between my-5">
-          <div class="footer__cr col-4">
-            <p>Created by AP for <a target="_blank" href="https://github.com/UWFront-End-Cert/html300-v2/tree/master/lesson06/assignment">UW-HTML300</a></p>
-          </div>
-          <div class="icons row text-right col-4">
-         <a href="#">
-            <div class="layer">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-               <span class="fab fa-facebook-f"></span>
+            <div class="collapse navbar-collapse" id="navbarsExample05">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item mr-3 active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-3">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item mr-3">
+                  <a class="nav-link" href="">History</a>
+                </li>
+                <li class="nav-item mr-3 dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</a>
+                  <div class="dropdown-menu bg-dark" aria-labelledby="dropdown05">
+                    <a class="dropdown-item" href="translator.html">Yoda</a>
+                    <a class="dropdown-item" href="translator.html">Huttese</a>
+                    <a class="dropdown-item" href="translator.html">Aurebesh</a>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div class="text">
-               Facebook
-            </div>
-         </a>
-         <a href="#">
-            <div class="layer">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-               <span class="fab fa-twitter"></span>
-            </div>
-            <div class="text">
-               Twitter
-            </div>
-         </a>
-         <a href="#">
-            <div class="layer">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-               <span class="fab fa-instagram"></span>
-            </div>
-            <div class="text">
-               Instagram
-            </div>
-         </a>
-         <a href="#">
-            <div class="layer">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-               <span class="fab fa-linkedin-in"></span>
-            </div>
-            <div class="text">
-               Linkedin
-            </div>
-         </a>
-         <a href="#">
-            <div class="layer">
-               <span></span>
-               <span></span>
-               <span></span>
-               <span></span>
-               <span class="fab fa-youtube"></span>
-            </div>
-            <div class="text">
-               YouTube
-            </div>
-         </a>
-      </div></footer>
-      </main>
-<script type="text/javascript" src="index.js"></script>
+          </nav>
+          <hr class="hr_rule">
+        </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     </body>
 </html>

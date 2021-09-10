@@ -13,6 +13,23 @@ $link-blue: #2867B2;
 $red: #ff0000;
 
 //Typography
+@font-face {
+  font-family: "moderna";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.eot");
+}
+@font-face {
+  font-family: "moonhouse";
+  src: url("/fonts/Moonhouse-yE5M.ttf");
+}
+@font-face {
+  font-family: "SF Distant Galaxy Outline";
+  src: url("/fonts/SfDistantGalaxyOutline-xoeO.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+}
+
 $moon: 'moonhouse';
 $galaxy: 'SF Distant Galaxy Outline';
 
