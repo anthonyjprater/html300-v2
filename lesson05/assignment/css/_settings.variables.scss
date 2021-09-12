@@ -1,1 +1,17 @@
 // Colors
+$space-blue: #482ff7;
+$space-red: #ff8080;
+$saber-blue: #0000c9;
+$eclipse: #2f2f2f;
+$form: #f8f8f8;
+$form-btn: #8f8f8f;
+$becca: #663399;
+
+//Typography
+$moon: 'moonhouse';
+$galaxy: 'SF Distant Galaxy Outline';
+
+//Mixins
+@mixin newborder {
+  border-radius: 5px;
+}

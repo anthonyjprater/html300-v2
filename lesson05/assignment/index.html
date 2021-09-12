@@ -1,15 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 05 - CSS Grid</title>
-    </head>
-    <body>
-        <main class="main">
-          
-        </main>
-    </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/5398a5e1fc.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="index.js"></script>
+  <title>Assignment 05 - CSS Grid and Flexbox</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title"><a href="#" class="logo">Galactic Translator</a></h1>
+    </header>
+    <nav class="nav">
+      <ul class="nav-menu" id="js-menu">
+        <li class="menu"><a href="#" class="nav-link">Home</a></li>
+        <li class="menu"><a href="#" class="nav-link">Yoda</a></li>
+        <li class="menu"><a href="#" class="nav-link">Sith</a></li>
+        <li class="menu"><a href="#" class="nav-link">Gungan</a></li>
+        <li class="menu"><a href="#" class="nav-link">Huttese</a></li>
+        <li class="menu"><a href="#" class="nav-link">Mandolorian</a></li>
+        <li class="menu"><a href="#" class="nav-link">Cheunh</a></li>
+      </ul>
+      <button class="hamburger">Menu
+        <div class="hamburger--close">
+        </div>
+      </button>
+    </nav>
+    <main class="main-content" id="main-content">
+      <article class="translator">
+        <h2 class="translator__heading">Translator</h2>
+        <div id="prompt" class="translator__prompt bubble">What text would you like me to translate for you?</div>
+        <form action="" class="translator__form">
+          <div id="userInput" class="bubble">
+            <textarea name="ytext" id="ytext" cols="120" rows="10" class="form" onfocus="myfunction(c3po)" onblur="yourfunction(c3po)" placeholder="Please type your text here so C-3P0 can translate it for you..."></textarea>
+          </div>
+          <span id="outPut" class="bubble"></span>
+          <button id="translateButton" type="submit" name="translate" class="translator__btn--hidden">Translate Now</button>
+        </form>
+        <button id="newTranslation" class="translator__btn">New Translation</button>
+      </article>
+      <div class="holo"></div>
+    </main>
+    <aside class="sidebar">
+      <!-- 	avatar image -->
+      <div class="img">
+        <img src="/images/c3po.jpg" alt="a repaired golden droid" class="avatar" id="c3po">
+      </div>
+    </aside>
+    <!-- footer-->
+    <footer class="footer">
+      <div class="footer__cr">
+        <a href="https://github.com/anthonyjprater/html300-v2.git" target="_blank">
+          <p>Created by AP for UW-HTML300</p>
+        </a>
+      </div>
+      <div class="footer__social">
+        <div class="icons">
+          <a href="#">
+            <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-facebook-f"><a href="https://www.facebook.com/"></a></span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-twitter"><a href="https://twitter.com/?lang=en"></a></span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-instagram"><a href="https://www.instagram.com/"></a></span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-linkedin-in"><a href="https://www.linkedin.com/"></a></span>
+            </div>
+          </a>
+          <a href="#">
+            <div class="layer">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="fab fa-youtube"><a href="https://www.youtube.com/"></a></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </footer>
+</body>
+
 </html>
