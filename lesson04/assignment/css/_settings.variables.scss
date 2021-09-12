@@ -1,0 +1,17 @@
+//Colors
+$becca: #663399;
+$fb-blue: #4267b2;
+$tweet-blue: #1da1f2;
+$pink: #e1306c;
+$link-blue: #2867b2;
+$red: #ff0000;
+
+//Typography
+$font: "Poppins", sans-serif;
+
+//Mixins
+@mixin grid {
+  display: grid;
+  display: -ms-grid;
+  place-items: center;
+}
