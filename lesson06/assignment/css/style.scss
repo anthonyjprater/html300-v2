@@ -5,7 +5,6 @@
 @import "components.content";
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
-
 .body {
   background-color: #000;
 }
@@ -24,12 +23,6 @@
   // width: 100%;
   // height: 100%;
 }
-
-
-
-
-
-
 
 .stars {
   z-index: 0;
@@ -74,25 +67,23 @@
   border-top: 2px solid #fff;
 }
 
-
 .navbar-brand {
-  font-family: SF Distant Galaxy Outline, 'monospace';
+  font-family: SF Distant Galaxy Outline, "monospace";
   color: red;
   text-shadow: 2px 2px 2px $space-red, 0 0 2px $space-blue, 0 0 2px $space-blue;
   font-family: $galaxy;
   transition: text-shadow 1s ease, color 2s ease, font-weight 2s ease,
-  opacity 2s ease;
+    opacity 2s ease;
   &:hover {
     color: #fff;
-  	text-shadow: 1px 1px 2px gold, 0 0 1rem yellow, 0 0 0.2rem yellow;
-  	font-weight: 600;
-  	border-radius: 8px;
+    text-shadow: 1px 1px 2px gold, 0 0 1rem yellow, 0 0 0.2rem yellow;
+    font-weight: 600;
+    border-radius: 8px;
   }
   & .logo {
     font-size: 1.5rem;
   }
 }
-
 
 .nav-item {
   font-family: $moon;
@@ -102,7 +93,7 @@
   box-shadow: 1px 1px 1px 1px $eclipse;
   & .nav-link {
     color: $eclipse;
-    &:hover{
+    &:hover {
       color: #bbb;
       text-shadow: 2px 2px 2px $space-blue;
     }
@@ -119,10 +110,10 @@ div > .dropdown-item {
   font-family: $moon;
   text-shadow: 1px 1px 1px #bbb;
   &:hover {
-  color: #bbb;
-  text-shadow: 2px 2px 2px $space-blue;
-  background-color: #000;
-  line-height: 1.5rem;
+    color: #bbb;
+    text-shadow: 2px 2px 2px $space-blue;
+    background-color: #000;
+    line-height: 1.5rem;
   }
 }
 
@@ -142,6 +133,7 @@ div > .dropdown-item {
 h2 {
   color: blue;
 }
+
 /*Image Page Styling*/
 .title__image {
   font-family: SF Distant Galaxy Outline;
@@ -155,10 +147,9 @@ h2 {
 .gallery__image {
 }
 
-
 // Philology Page Styling
 .body__translator {
-	background-color: #000;
+  background-color: #000;
 }
 .accordion .card {
   background-color: #000;
@@ -171,15 +162,11 @@ h2 > .btn {
   font-family: $moon;
 }
 
-
-
-
-
 .card-body {
   color: #8f8f8f;
   font-size: 1.25rem;
   line-height: 1.5rem;
-  font-family: 'monospace';
+  font-family: "monospace";
 }
 
 
@@ -193,8 +180,6 @@ h2 > .btn {
     font-size: 1.1rem;
   }
 }
-
-
 
 .icons a {
   margin: 0 16px;
@@ -221,11 +206,6 @@ h2 > .btn {
   border-radius: 30px;
   transition: all 0.3s;
 }
-
-
-
-
-
 
 .icons a .layer span.fab {
   font-size: 0.8rem;
