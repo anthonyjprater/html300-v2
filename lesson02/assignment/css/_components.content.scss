@@ -1,17 +1,19 @@
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .main {
-    padding: 2rem;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
 }
 
 h1 {
-    color: $red;  
+  color: $red;
 }
