@@ -25,12 +25,16 @@
   // height: 100%;
 }
 
+
+
+
+
+
+
 .stars {
   z-index: 0;
   background: #000 url("/images/stars.png") repeat top center;
 }
-
-
 .twinkling {
   z-index: 1;
   background: transparent url("/images/twinkling.png") repeat top center;
@@ -74,7 +78,6 @@
 .navbar-brand {
   font-family: SF Distant Galaxy Outline, 'monospace';
   color: red;
-  letter-spacing: -0.15rem;
   text-shadow: 2px 2px 2px $space-red, 0 0 2px $space-blue, 0 0 2px $space-blue;
   font-family: $galaxy;
   transition: text-shadow 1s ease, color 2s ease, font-weight 2s ease,
@@ -90,6 +93,7 @@
   }
 }
 
+
 .nav-item {
   font-family: $moon;
   font-size: 1.5rem;
@@ -100,7 +104,7 @@
     color: $eclipse;
     &:hover{
       color: #bbb;
-      text-shadow: 1px 1px 1px #88f;
+      text-shadow: 2px 2px 2px $space-blue;
     }
   }
   &:hover {
@@ -109,15 +113,16 @@
 }
 
 div > .dropdown-item {
-  color: $space-blue;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 900;
   font-family: $moon;
-  text-shadow: 2px 2px 2px #bbb;
+  text-shadow: 1px 1px 1px #bbb;
   &:hover {
   color: #bbb;
   text-shadow: 2px 2px 2px $space-blue;
   background-color: #000;
   line-height: 1.5rem;
-  font-size: 1.25rem;
   }
 }
 
@@ -134,10 +139,9 @@ div > .dropdown-item {
 .main {
   background-color: #000;
 }
-
-
-
-
+h2 {
+  color: blue;
+}
 /*Image Page Styling*/
 .title__image {
   font-family: SF Distant Galaxy Outline;
@@ -151,6 +155,34 @@ div > .dropdown-item {
 .gallery__image {
 }
 
+
+// Philology Page Styling
+.body__translator {
+	background-color: #000;
+}
+.accordion .card {
+  background-color: #000;
+  border-radius: 30px;
+  box-shadow: 2px 2px 100px 2px $saber-blue;
+}
+h2 > .btn {
+  border: 2px solid $saber-blue;
+  box-shadow: 3px 0px 100px 1px $saber-blue;
+  font-family: $moon;
+}
+
+
+
+
+
+.card-body {
+  color: #8f8f8f;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-family: 'monospace';
+}
+
+
 // Footer animation
 .footer__contact {
   letter-spacing: 0.2rem;
@@ -161,6 +193,9 @@ div > .dropdown-item {
     font-size: 1.1rem;
   }
 }
+
+
+
 .icons a {
   margin: 0 16px;
   text-decoration: none;
@@ -186,12 +221,19 @@ div > .dropdown-item {
   border-radius: 30px;
   transition: all 0.3s;
 }
+
+
+
+
+
+
 .icons a .layer span.fab {
   font-size: 0.8rem;
   line-height: 2.5rem;
   text-align: center;
   animation: pulse 700ms infinite;
 }
+
 .icons a:hover .layer span:nth-child(1) {
   opacity: 0.2;
   width: 2.2rem;

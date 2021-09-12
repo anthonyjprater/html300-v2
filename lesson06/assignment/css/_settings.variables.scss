@@ -30,8 +30,11 @@ $red: #ff0000;
   src: url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 }
 
-$moon: 'moonhouse';
-$galaxy: 'SF Distant Galaxy Outline';
+$poppin: "Poppins";
+$moon: "moonhouse";
+$galaxy: "SF Distant Galaxy Outline";
+
+
 
 //Mixins
 @mixin newborder {

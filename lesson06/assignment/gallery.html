@@ -6,22 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/5398a5e1fc.js" crossorigin="anonymous"></script>
   <title>Assignment 06 - Bootstrap 4</title>
 </head>
 
 <body class="image__page">
+  <header class="main">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand shadow-large d-flex flex-wrap" href="#">
+          <h1 class="logo mr-1">Galactic Translator</h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">Menu</span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mr-3 active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="philology.html">Philology</a>
+            </li>
+            <li class="nav-item mr-3 dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</a>
+              <div class="dropdown-menu bg-dark" aria-labelledby="dropdown05">
+                <a class="dropdown-item" href="translator.html">Yoda</a>
+                <a class="dropdown-item" href="translator.html">Huttese</a>
+                <a class="dropdown-item" href="translator.html">Aurebesh</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <hr class="hr_rule col-12">
+  </header>
 
   <main class="container gallery text-center py-3">
     <h1 class="display-4 title__image font-weight-bold pb-2 mt-4 mb-2 border-bottom">Views of the Galactic Empire</h1><a href="index.html">HERE</a>
     <div id="galleryWrapper" class="wrapper_gallery row align-content-around rounded pt-3">
     </div>
-    <footer class="col-12 row justify-content-between py-3 my-5">
-      <div class="footer__cr col-4">
+  </main>
+
+  <div class="container">
+    <footer class="mt-5 col-12 d-flex flex-column flex-md-row align-items-center">
+      <div class="footer__cr flex-fill text-center">
         <p class="footer__contact">Created by AP for <a class="footer__contact_link" target="_blank" href="https://github.com/UWFront-End-Cert/html300-v2/tree/master/lesson06/assignment">UW-HTML300</a></p>
       </div>
-      <div class="icons d-flex flex-nowrap col-4">
+      <div class="icons d-flex flex-nowrap flex-fill">
         <a href="https://www.facebook.com/">
           <div class="layer">
             <span></span>
@@ -84,7 +122,8 @@
         </a>
       </div>
     </footer>
-  </main>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
