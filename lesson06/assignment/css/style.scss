@@ -133,6 +133,21 @@ div > .dropdown-item {
 h2 {
   color: blue;
 }
+//Styling for Hologram Image
+.avatar {
+  max-width: 100%;
+  height: auto;
+  filter: invert(1) opacity(0.2);
+  border-radius: 50%;
+  &:hover {
+    filter: invert(0) opacity(0.5);
+  }
+}
+.form__button {
+  font-family: $moon;
+  letter-spacing: 0.25rem;
+}
+
 
 /*Image Page Styling*/
 .title__image {
