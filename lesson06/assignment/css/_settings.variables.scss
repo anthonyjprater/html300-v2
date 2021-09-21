@@ -1,1 +1,42 @@
 // Colors
+$space-blue: #482ff7;
+$space-red: #ff8080;
+$saber-blue: #0000c9;
+$eclipse: #2f2f2f;
+$form: #f8f8f8;
+$form-btn: #8f8f8f;
+$becca: #663399;
+$fb-blue: #4267B2;
+$tweet-blue: #1DA1F2;
+$pink: #E1306C;
+$link-blue: #2867B2;
+$red: #ff0000;
+
+//Typography
+@font-face {
+  font-family: "moderna";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/moderna_-webfont.eot");
+}
+@font-face {
+  font-family: "moonhouse";
+  src: url("/fonts/Moonhouse-yE5M.ttf");
+}
+@font-face {
+  font-family: "SF Distant Galaxy Outline";
+  src: url("/fonts/SfDistantGalaxyOutline-xoeO.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+}
+
+$poppin: "Poppins";
+$moon: "moonhouse";
+$galaxy: "SF Distant Galaxy Outline";
+
+
+
+//Mixins
+@mixin newborder {
+  border-radius: 5px;
+}
