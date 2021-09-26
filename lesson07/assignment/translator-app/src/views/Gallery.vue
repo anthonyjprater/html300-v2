@@ -1,7 +1,9 @@
 <template>
-<Header />
-<Image />
-<Footer />
+<div>
+  <Header />
+  <Image />
+  <Footer />
+</div>
 </template>
 
 <script>

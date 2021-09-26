@@ -50,15 +50,6 @@ export default {
     msg: String
   }
 }
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
