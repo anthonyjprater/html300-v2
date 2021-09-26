@@ -1,17 +1,17 @@
 <template>
 <div id="app">
-  <Gallery />
+  <Philology />
 </div>
 </template>
 
 <script>
-import Gallery from "./views/Gallery.vue";
+import Philology from "./views/Philology.vue";
 
 
 export default {
   name: 'App',
   components: {
-    Gallery,
+    Philology,
   }
 }
 </script>
