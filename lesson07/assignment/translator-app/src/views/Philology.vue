@@ -1,9 +1,7 @@
 <template>
-<div class="home">
-  <Header />
-  <Language />
-  <Footer />
-</div>
+<Header />
+<Language />
+<Footer />
 </template>
 
 <script>

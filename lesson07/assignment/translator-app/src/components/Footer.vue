@@ -193,7 +193,6 @@ export default {
 .icons a:hover .layer span:nth-child(5) {
   opacity: 1;
   transform: translate(20px, -50px);
-  background-color: #000;
   width: 3rem;
   height: 3rem;
 

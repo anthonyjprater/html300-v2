@@ -8,15 +8,19 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4",
+    "@jeremyhamm/vue-slider": "^0.2.0",
     "bootstrap": "^5.1.1",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
     "popper.js": "^1.16.1",
     "vue": "^3.2.19",
+    "vue-burger-menu": "^2.0.5",
     "vue-router": "^3.5.2"
   },
   "devDependencies": {

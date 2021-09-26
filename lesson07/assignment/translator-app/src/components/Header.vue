@@ -1,7 +1,7 @@
 <template>
 <header class="main">
-  <nav class="navbar navbar-expand-lg ">
-    <div class="container-fluid">
+  <nav class=" navbar navbar-expand-lg ">
+    <div class="nav__wrapper container-fluid">
       <a class="navbar-brand shadow-large d-flex flex-wrap" href="#">
         <h1 class="logo mr-1" data-toggle="tooltip" data-placement="top" title="A long time ago in a galaxy far, far away....">Galactic Translator</h1>
       </a>
@@ -10,7 +10,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExample05">
-        <ul class="navbar-nav mx-auto">
+        <ul class="nav-menu navbar-nav mx-auto" id="js-menu">
           <li class="nav-item mr-3 active">
             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
@@ -29,6 +29,13 @@
             </div>
           </li>
         </ul>
+        <button class="hamburger">Menu
+          <div class="hamburger--close">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </button>
       </div>
     </div>
   </nav>
@@ -43,14 +50,32 @@ export default {
     msg: String
   }
 }
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
 .hr_rule {
     border-top: 2px solid #fff;
 }
-
+.nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 .navbar-brand {
     font-family: SF Distant Galaxy Outline, "monospace";
     color: red;
@@ -67,7 +92,11 @@ export default {
         font-size: 1.5rem;
     }
 }
-
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .nav-item {
     font-family: $moon;
     font-size: 1.5rem;
@@ -85,7 +114,9 @@ export default {
         box-shadow: 3px 3px 3px #bbb;
     }
 }
-
+.menu {
+    display: flex;
+}
 div > .dropdown-item {
     color: #000;
     font-size: 1.5rem;
@@ -108,5 +139,74 @@ div > .dropdown-item {
         color: $saber-blue;
         width: auto;
     }
+}
+.hamburger {
+    display: none;
+    background-color: #000;
+    color: #999;
+    border-radius: 5px;
+    box-shadow: -2px 1px 15px 1px #888;
+    transition: box-shadow 250ms ease-in;
+}
+.hamburger:hover {
+    box-shadow: 2px 2px 8px 1px #0000c9;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ccc;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 200, 0.5);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .menu {
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+        min-width: 8rem;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #000;
+    box-shadow: 1px 1px 3px 1px red;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #000;
+    box-shadow: 1px 1px 3px 1px blue;
 }
 </style>
