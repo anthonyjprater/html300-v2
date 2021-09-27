@@ -11,7 +11,7 @@
           <span></span>
           <span></span>
           <span></span>
-          <span class="fab fa-facebook-f"></span>
+          <span class="fab fa-facebook-f">F</span>
         </div>
         <div class="text">
           Facebook
@@ -23,7 +23,7 @@
           <span></span>
           <span></span>
           <span></span>
-          <span class="fab fa-twitter"></span>
+          <span class="fab fa-twitter">T</span>
         </div>
         <div class="text">
           Twitter
@@ -35,7 +35,7 @@
           <span></span>
           <span></span>
           <span></span>
-          <span class="fab fa-instagram"></span>
+          <span class="fab fa-instagram">I</span>
         </div>
         <div class="text">
           Instagram
@@ -47,7 +47,7 @@
           <span></span>
           <span></span>
           <span></span>
-          <span class="fab fa-linkedin-in"></span>
+          <span class="fab fa-linkedin-in">L</span>
         </div>
         <div class="text">
           Linkedin
@@ -59,7 +59,7 @@
           <span></span>
           <span></span>
           <span></span>
-          <span class="fab fa-youtube"></span>
+          <span class="fab fa-youtube">Y</span>
         </div>
         <div class="text">
           YouTube

@@ -12,7 +12,7 @@
       <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="nav-menu navbar-nav mx-auto" id="js-menu">
           <li class="nav-item mr-3 active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item mr-3">
             <a class="nav-link" href="gallery.html">Gallery</a>
@@ -22,11 +22,6 @@
           </li>
           <li class="nav-item mr-3 dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</a>
-            <div class="dropdown-menu bg-dark" aria-labelledby="dropdown05">
-              <a class="dropdown-item" href="translator.html">Yoda</a>
-              <a class="dropdown-item" href="translator.html">Huttese</a>
-              <a class="dropdown-item" href="translator.html">Aurebesh</a>
-            </div>
           </li>
         </ul>
         <button class="hamburger">Menu
