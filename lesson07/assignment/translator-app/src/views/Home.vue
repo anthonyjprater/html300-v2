@@ -3,7 +3,7 @@
   <div class="row landing">
     <div class="stars position-absolute col-12 overflow-hidden"></div>
     <div class="twinkling position-absolute col-12 overflow-hidden"></div>
-    <div class="jumbotron bg-transparent text-warning container col-12">
+    <div class="jumbotron bg-transparent text-warning container col-8">
       <h1 class="landing__header justify-content-between text-center col-12 mb-5" data-toggle="tooltip" data-placement="top" title="A long time ago in a galaxy far, far away....">Galactic Translator</h1>
       <p class="hero__runner text-center mb-5 mt-5">A Project for UW HTML 300 Course</p>
       <a href="translator.html" class="landing__link btn btn-warning py-1 px-4">Enter</a>
@@ -81,6 +81,7 @@ export default {
     z-index: 1;
     text-shadow: 4px 4px 5px #fff, 0 0 2px #fff, 0 0 2px #fff;
     font-size: 5rem;
+    text-align: center;
     @include media-query(mobile) {
         font-size: 2rem;
     }
@@ -89,6 +90,7 @@ export default {
 .hero__runner {
     z-index: 1;
     text-shadow: 4px 4px 5px #fff, 0 0 2px #fff, 0 0 2px #fff;
+    text-align: center;
 }
 
 .btn {
