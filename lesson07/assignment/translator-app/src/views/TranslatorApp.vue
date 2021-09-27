@@ -1,15 +1,14 @@
 <template>
-<div class="translator-app">
-  <Header />
-  <Translator />
-  <Footer />
-</div>
+<Header />
+<Translator />
+<Footer />
 </template>
 
 <script>
-import Header from "@/components/Header.vue";
 import Translator from "@/components/Translator.vue";
+import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+
 
 export default {
   name: 'TranslatorApp',

@@ -9,16 +9,16 @@
       <div class="collapse navbar-collapse" id="navbarsExample05">
         <ul class="nav-menu navbar-nav mx-auto" v-bind:class="{active: isActive}" id="js-menu">
           <li class="nav-item mr-3 active">
-            <a class="nav-link" href="index.html">Home</a>
+            <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item mr-3">
-            <a class="nav-link" href="gallery.html">Gallery</a>
+            <router-link to="/gallery" class="nav-link">Gallery</router-link>
           </li>
           <li class="nav-item mr-3">
-            <a class="nav-link" href="philology.html">Philology</a>
+            <router-link to="/philology" class="nav-link">Philology</router-link>
           </li>
           <li class="nav-item mr-3 dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</a>
+            <router-link to="/translator" class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</router-link>
           </li>
         </ul>
         <button class="hamburger" @click="myFilter" v-bind:class="{active: isActive}">Menu

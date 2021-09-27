@@ -6,7 +6,7 @@
     <div class="jumbotron bg-transparent text-warning container col-8">
       <h1 class="landing__header justify-content-between text-center col-12 mb-5" data-toggle="tooltip" data-placement="top" title="A long time ago in a galaxy far, far away....">Galactic Translator</h1>
       <p class="hero__runner text-center mb-5 mt-5">A Project for UW HTML 300 Course</p>
-      <a href="translator.html" class="landing__link btn btn-warning py-1 px-4">Enter</a>
+      <router-link to="/translator" class="landing__link btn btn-warning py-1 px-4">Enter</router-link>
     </div>
   </div>
   <router-view /> <audio class="landing__audio" autoplay loop>
@@ -17,28 +17,21 @@
 </template>
 
 <script>
+// @ is an alias to /src
+
 export default {
   name: 'Home',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      audio: require('../assets/sound_Far Out - The Force Theme.mp3')
-    }
-  }
+  components: {
 
+  }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../assets/base.normalize";
 @import "../assets/settings.variables";
 @import "../assets/settings.responsive";
 @import "../assets/components.content";
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-
 .stars,
 .twinkling {
     position: absolute;
@@ -57,7 +50,6 @@ export default {
     background: transparent url("../assets/twinkling.png") repeat top center;
     animation: move-twink-back 200s linear infinite;
 }
-
 @keyframes move-twink-back {
     from {
         background-position: 0, 0;
@@ -66,7 +58,6 @@ export default {
         background-position: -10000px, 5000px;
     }
 }
-
 .jumbotron {
     z-index: 1;
     color: gold;
@@ -76,7 +67,6 @@ export default {
     background: #000 url("../assets/stars.png") repeat top center;
     animation: move-twink-back 200s linear infinite;
 }
-
 .landing__header {
     z-index: 1;
     text-shadow: 4px 4px 5px #fff, 0 0 2px #fff, 0 0 2px #fff;
@@ -86,13 +76,11 @@ export default {
         font-size: 2rem;
     }
 }
-
 .hero__runner {
     z-index: 1;
     text-shadow: 4px 4px 5px #fff, 0 0 2px #fff, 0 0 2px #fff;
     text-align: center;
 }
-
 .btn {
     z-index: 1;
     font-family: sans-serif;
@@ -103,7 +91,6 @@ export default {
 a {
     text-decoration: none;
 }
-
 landing__audio {
     width: 1px;
     height: 1px;
