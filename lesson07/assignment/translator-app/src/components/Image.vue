@@ -3,9 +3,11 @@
   <h1 class="display-4 title__image font-weight-bold pb-2 mt-4 mb-2 border-bottom">
     Views of the Galactic Empire
   </h1>
+  <!-- image gallery composed of images fetched by unsplash.com and iterated through with a v-for loop bound by the index key -->
   <div id="galleryWrapper" class="wrapper_gallery row align-content-around rounded pt-3">
     <template v-for="item in items" v-bind:key="item">
       <div class="figure__wrapper">
+        <!-- each item uses json data received to provide links to the image, source, alt description, and users name and profile link  -->
         <figure class="figure">
           <a :href="item.links.self" class="d-block text-center">
             <img class="img-fluid img-thumbnail bg-dark gallery__image" :src="item.urls.regular" :alt="item.alt_description" />
@@ -28,10 +30,9 @@ export default {
   props: {
     msg: String
   },
+  //item array is used to access json data provided from API
   data() {
     return {
-      message: "Welcome to Vue!",
-      totalVuePackages: "",
       items: [],
       siteCredit: "https://unsplash.com/?utm_source=your_app_name&utm_medium=referral",
     }
@@ -41,6 +42,7 @@ export default {
       alert("Hello!");
     }
   },
+  // fetch used to get json data from unsplash API
   created() {
     // GET request using fetch with error handling
     fetch("https://api.unsplash.com/search/photos?query=starwars&per_page=12&client_id=PaHrfu4_q3NMgYkSbeKWbwn7QLzd8AQuzUtbVnBkafg")
@@ -55,10 +57,6 @@ export default {
         }
         this.items = images.results;
         this.total = images.total;
-        // this.imageLink = images.results.urls.regular;
-        // this.altText - images.results.alt_description;
-        // this.creditLink = images.results.user.links.html;
-        // this.creditName = images.results.username;
         console.log(images.results);
       })
       .catch((error) => {

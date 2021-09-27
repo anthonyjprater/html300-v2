@@ -2,7 +2,7 @@
 <div class="footer__wrapper pt-5 mt-5">
   <footer class="footer mt-5 col-12 d-flex flex-column flex-md-row align-items-center">
     <div class="footer__cr flex-fill text-center">
-      <p class="footer__contact">Created by AP for <a class="footer__contact_link" target="_blank" href="https://github.com/UWFront-End-Cert/html300-v2/tree/master/lesson06/assignment">UW-HTML300</a></p>
+      <p class="footer__contact">Created by AP for <a class="footer__contact_link" target="_blank" href="https://github.com/UWFront-End-Cert/html300-v2/tree/master/lesson07/assignment">UW-HTML300</a></p>
     </div>
     <div class="icons d-flex flex-nowrap flex-fill">
       <a href="https://www.facebook.com/">
@@ -122,6 +122,7 @@ export default {
   }
 }
 
+/*social media links requiring font awesome update*/
 .icons {
   display: flex;
   align-items: center;

@@ -77,25 +77,35 @@ export default {
     align-items: center;
     font-family: 'moderna';
 }
+.userText {
+    color: $space-blue;
+    border-radius: 4px;
+    box-shadow: 1px -1px 15px 1px $saber-blue;
+    line-height: 1.2rem;
+    padding: 0.2rem;
+}
 textarea {
     opacity: 1;
-    color: #fffa00;
-    letter-spacing: 0.1rem;
-    line-height: 1.1rem;
-    text-shadow: 1px 1px 1px #fff;
+    color: $saber-blue;
+    letter-spacing: 0.2rem;
+    line-height: 1.2rem;
     background-color: #000;
     border: 0 solid #000;
     border-radius: 10px;
+    font-family: $poppin;
 }
 .form__button {
     background-color: grey;
     border-radius: 6px;
     padding: 0.5rem 1rem;
     margin: 1rem;
+    font-size: 1.2rem;
     font-family: $moon;
     letter-spacing: 0.25rem;
     &:hover {
-        background-color: blue;
+        background-color: $saber-blue;
+        color: #000;
+        font-size: 1rem;
     }
 }
 .translator__prompt {

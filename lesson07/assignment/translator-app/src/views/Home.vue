@@ -6,11 +6,11 @@
     <div class="jumbotron bg-transparent text-warning container col-8">
       <h1 class="landing__header justify-content-between text-center col-12 mb-5" data-toggle="tooltip" data-placement="top" title="A long time ago in a galaxy far, far away....">Galactic Translator</h1>
       <p class="hero__runner text-center mb-5 mt-5">A Project for UW HTML 300 Course</p>
-      <router-link to="/translator" class="landing__link btn btn-warning py-1 px-4">Enter</router-link>
+      <router-link to="/translator" class="landing__link btn btn-warning py-1 px-4">{{text}}</router-link>
     </div>
   </div>
   <router-view /> <audio class="landing__audio" autoplay loop>
-    <source :src="audio">
+    <source src="/public/ref/the-force-theme.mp3">
     <p>Your browser doesn't support HTML5 audio. Here is a <a href="https://soundcloud.com/faroutofficial/far-out-the-force-theme-star-wars-cover">link to the audio</a> instead.</p>
   </audio>
 </main>
@@ -23,15 +23,18 @@ export default {
   name: 'Home',
   components: {
 
+  },
+  //audio file needing to be inserted through v-bind
+  data() {
+    return {
+      audio: 'src/assets/the-force-theme.mp3',
+      text: 'Enter'
+    }
   }
 }
 </script>
+/*Recfactored styling do to lack of bootstrap utility classes*/
 <style scoped lang="scss">
-@import "../assets/base.normalize";
-@import "../assets/settings.variables";
-@import "../assets/settings.responsive";
-@import "../assets/components.content";
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 .stars,
 .twinkling {
     position: absolute;
@@ -49,6 +52,23 @@ export default {
     z-index: 1;
     background: transparent url("../assets/twinkling.png") repeat top center;
     animation: move-twink-back 200s linear infinite;
+}
+a {
+    text-decoration: none;
+}
+.landing__link {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #000;
+    &:hover {
+        background: #000;
+        color: #ffc107;
+        box-shadow: inset 0 0 1px 1px #ffc107, -2px -2px 5px 1px #fff;
+        font-family: $galaxy;
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+        text-shadow: 2px 2px 3px #fff;
+    }
 }
 @keyframes move-twink-back {
     from {

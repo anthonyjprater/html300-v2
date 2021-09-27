@@ -126,8 +126,11 @@ export default {
     font-family: sans-serif;
     padding-bottom: 2rem;
     margin: 1rem 0 2rem;
-    min-height: 10rem;
+    min-height: 50rem;
     border-radius: 8px;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
 }
 @media only screen and (max-width: 600px) {
     .accordion__body--open {

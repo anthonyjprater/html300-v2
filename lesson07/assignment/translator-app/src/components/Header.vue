@@ -5,11 +5,15 @@
       <a class="navbar-brand shadow-large d-flex flex-wrap" href="#">
         <h1 class="logo mr-1" data-toggle="tooltip" data-placement="top" title="A long time ago in a galaxy far, far away....">Galactic Translator</h1>
       </a>
-
+      <!-- binding a class based on the isActive truthy to the nav menu -->
       <div class="collapse navbar-collapse" id="navbarsExample05">
-        <ul class="nav-menu navbar-nav mx-auto" v-bind:class="{active: isActive}" id="js-menu">
+        <!-- router-link to nav for each main app vue -->
+        <ul class="nav-menu navbar-nav mx-auto" :class="{active: isActive}" id="js-menu">
           <li class="nav-item mr-3 active">
             <router-link to="/" class="nav-link">Home</router-link>
+          </li>
+          <li class="nav-item mr-3 dropdown">
+            <router-link to="/translator" class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</router-link>
           </li>
           <li class="nav-item mr-3">
             <router-link to="/gallery" class="nav-link">Gallery</router-link>
@@ -17,10 +21,8 @@
           <li class="nav-item mr-3">
             <router-link to="/philology" class="nav-link">Philology</router-link>
           </li>
-          <li class="nav-item mr-3 dropdown">
-            <router-link to="/translator" class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</router-link>
-          </li>
         </ul>
+        <!-- hamburger display based on media query also bound to isActive truthy class -->
         <button class="hamburger" @click="myFilter" v-bind:class="{active: isActive}">Menu
           <div class="hamburger--close">
             <span class="bar"></span>
@@ -41,11 +43,13 @@ export default {
   props: {
     msg: String
   },
+  //data function returning object containing boolean
   data() {
     return {
       isActive: false
     }
   },
+  //function toggling isActive class onclick
   methods: {
     myFilter: function() {
       this.isActive = !this.isActive;
@@ -196,7 +200,7 @@ div > .dropdown-item {
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
-
+/* translating hamburger bars to light sabers */
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
     background-color: #000;
