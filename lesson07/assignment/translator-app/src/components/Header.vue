@@ -5,12 +5,9 @@
       <a class="navbar-brand shadow-large d-flex flex-wrap" href="#">
         <h1 class="logo mr-1" data-toggle="tooltip" data-placement="top" title="A long time ago in a galaxy far, far away....">Galactic Translator</h1>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">Menu</span>
-      </button>
 
       <div class="collapse navbar-collapse" id="navbarsExample05">
-        <ul class="nav-menu navbar-nav mx-auto" id="js-menu">
+        <ul class="nav-menu navbar-nav mx-auto" v-bind:class="{active: isActive}" id="js-menu">
           <li class="nav-item mr-3 active">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -24,7 +21,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Translator</a>
           </li>
         </ul>
-        <button class="hamburger">Menu
+        <button class="hamburger" @click="myFilter" v-bind:class="{active: isActive}">Menu
           <div class="hamburger--close">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -43,6 +40,16 @@ export default {
   name: 'Header',
   props: {
     msg: String
+  },
+  data() {
+    return {
+      isActive: false
+    }
+  },
+  methods: {
+    myFilter: function() {
+      this.isActive = !this.isActive;
+    }
   }
 }
 </script>
@@ -82,10 +89,12 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
 }
 .nav-item {
     font-family: $moon;
     font-size: 1.5rem;
+    padding: 0.25rem;
     letter-spacing: 0.1rem;
     border-radius: 8px;
     box-shadow: 1px 1px 1px 1px $eclipse;
@@ -129,7 +138,10 @@ div > .dropdown-item {
 .hamburger {
     display: none;
     background-color: #000;
-    color: #999;
+    color: $space-blue;
+    font-weight: 900;
+    font-family: $moon;
+    letter-spacing: 0.2rem;
     border-radius: 5px;
     box-shadow: -2px 1px 15px 1px #888;
     transition: box-shadow 250ms ease-in;
@@ -163,6 +175,7 @@ div > .dropdown-item {
 
     .nav-menu.active {
         left: 0;
+        index: 2;
     }
 
     .menu {
@@ -194,5 +207,14 @@ div > .dropdown-item {
     transform: translateY(-8px) rotate(-45deg);
     background-color: #000;
     box-shadow: 1px 1px 3px 1px blue;
+}
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
 </style>

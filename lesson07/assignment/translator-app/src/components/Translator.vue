@@ -4,10 +4,11 @@
     <!-- 	avatar image -->
     <aside class="col-12 col-sm-4 sidebar">
       <figure class="img">
-        <img v-bind:src="image" class="avatar img-fluid" id="c3po">
+        <img src="image" class="avatar img-fluid" id="c3po">
       </figure>
     </aside>
     <!-- translator interface -->
+    <p class="userText">{{ input }}</p>
     <section class="interface__wrapper container">
       <div class="row align-items-center">
         <main class="main-content col-12 rounded" id="main-content">
@@ -16,9 +17,8 @@
             <div id="prompt" class="translator__prompt bubble">{{ prompt }}</div>
             <form action="" class="translator__form text-center my-3">
               <div id="userInput" class="bubble">
-                <textarea v-model="input" name="ytext" id="ytext" cols="35" rows="10" class="form" placeholder="Please type your text here so C-3P0 can translate it ... for you..."></textarea>
+                <textarea v-model="input" name="ytext" id="ytext" cols="40" rows="12" class="form" placeholder="Please type your text here so C-3P0 can translate it ... for you..."></textarea>
               </div>
-              <span class="userText">{{ input }}</span>
               <span id="outPut" class="bubble"></span>
               <button id="translateButton" type="submit" name="translate" class="hidden btn btn-outline-light my-2 form__button">{{ translationbutton }}</button>
             </form>
@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import image from "../assets/c3po.jpg"
+
 export default {
   name: 'Translator',
   props: {
@@ -42,7 +44,7 @@ export default {
     return {
       input: "",
       message: "Welcome to Vue!",
-      image: '../assets/c3po.jpg',
+      image: image,
       alt: "a repaired golden droid",
       title: "Translator",
       prompt: "What text would you like me to translate for you?",
@@ -65,7 +67,26 @@ export default {
     text-align: center;
     gap: 1rem;
 }
-
+.translator__heading {
+    font-family: $moon;
+}
+.translator__form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'moderna';
+}
+textarea {
+    opacity: 1;
+    color: #fffa00;
+    letter-spacing: 0.1rem;
+    line-height: 1.1rem;
+    text-shadow: 1px 1px 1px #fff;
+    background-color: #000;
+    border: 0 solid #000;
+    border-radius: 10px;
+}
 .form__button {
     background-color: grey;
     border-radius: 6px;
@@ -76,6 +97,9 @@ export default {
     &:hover {
         background-color: blue;
     }
+}
+.translator__prompt {
+    margin-bottom: 1rem;
 }
 .main {
     background-color: #000;
