@@ -1,5 +1,5 @@
 <template>
-<div class="footer__wrapper container pt-5 mt-5">
+<div class="footer__wrapper pt-5 mt-5">
   <footer class="footer mt-5 col-12 d-flex flex-column flex-md-row align-items-center">
     <div class="footer__cr flex-fill text-center">
       <p class="footer__contact">Created by AP for <a class="footer__contact_link" target="_blank" href="https://github.com/UWFront-End-Cert/html300-v2/tree/master/lesson06/assignment">UW-HTML300</a></p>
