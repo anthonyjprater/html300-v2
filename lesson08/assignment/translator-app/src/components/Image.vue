@@ -5,8 +5,14 @@
 </template>
 
 <script>
+import {
+  imageMixin
+} from '@/mixins/imageMixin'
+
 export default {
   name: 'Image',
+  // Image Toggle Mixin
+  mixins: [imageMixin],
   data() {
     return {
       isActive: false
@@ -30,10 +36,6 @@ export default {
     doSomething() {
       alert("Hello!");
     },
-    myImage: function() {
-      this.isActive = !this.isActive;
-      // some code to filter users
-    }
   }
 }
 </script>
